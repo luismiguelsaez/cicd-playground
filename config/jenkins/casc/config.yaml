@@ -10,3 +10,22 @@ jenkins:
       users:
       - id: admin
         password: admin
+
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+        - usernamePassword:
+            scope:    GLOBAL
+            id:       anchore-users-admin
+            username: admin
+            password: 4dm1n
+            description: "Anchore default admin user"
+        - basicSSHUserPrivateKey:
+            scope: GLOBAL
+            id: github-default-ssh
+            username: git
+            description: "SSH private key provided"
+            privateKeySource:
+              directEntry:
+                privateKey: ${SSH_PRIVATE_KEY}

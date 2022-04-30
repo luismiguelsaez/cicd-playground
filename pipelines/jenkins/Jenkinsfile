@@ -1,0 +1,30 @@
+pipeline {
+  agent any
+  triggers {
+    GenericTrigger(
+     genericVariables: [
+      [key: 'BRANCH_WH', value: '$.branch']
+     ],
+
+     causeString: 'Triggered on $BRANCH_WH',
+
+     token: 'dummy',
+     tokenCredentialId: '',
+
+     printContributedVariables: true,
+     printPostContent: true,
+
+     silentResponse: false,
+
+     regexpFilterText: '$BRANCH_WH',
+     regexpFilterExpression: 'refs/heads/' + BRANCH_NAME
+    )
+  }
+  stages {
+    stage('Debugging build') {
+      steps {
+        sh "echo $BRANCH_WH"
+      }
+    }
+  }
+}

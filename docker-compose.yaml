@@ -8,11 +8,13 @@ services:
       dockerfile: Dockerfile
     environment:
       CASC_JENKINS_CONFIG: /var/jenkins_home/casc_configs
+      SSH_PRIVATE_KEY: ${SSH_PRIVATE_KEY:-''}
     ports:
       - 8080:8080/tcp
     volumes:
       - jenkins_data:/var/lib/jenkins_home:rw
       - ./config/jenkins/casc:/var/jenkins_home/casc_configs:rw
+      - ~/.ssh/id_rsa:/var/jenkins_home/ssh/privatekey:ro
 
 volumes:
   jenkins_data: {}

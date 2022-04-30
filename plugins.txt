@@ -1,3 +1,6 @@
 configuration-as-code
 pipeline-model-definition
 workflow-multibranch
+github
+git
+generic-webhook-trigger
