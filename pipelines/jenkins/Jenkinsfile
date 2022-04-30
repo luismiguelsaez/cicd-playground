@@ -3,7 +3,7 @@ pipeline {
   triggers {
     GenericTrigger(
      genericVariables: [
-      [key: 'POST_DATA', value: '$']
+      [key: 'BRANCH_WH', value: '$.branch']
      ],
 
      //causeString: 'Triggered on $BRANCH_WH',
@@ -23,7 +23,7 @@ pipeline {
   stages {
     stage('Debugging build') {
       steps {
-        sh "echo $POST_DATA"
+        echo "Building branch: $BRANCH_WH"
       }
     }
   }
