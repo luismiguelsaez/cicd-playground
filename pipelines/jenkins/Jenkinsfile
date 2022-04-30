@@ -3,7 +3,7 @@ pipeline {
   triggers {
     GenericTrigger(
      genericVariables: [
-      [key: 'BRANCH_WH', value: '$.branch']
+      [key: 'BRANCH_WH', value: '$.workflow_run.head_branch']
      ],
 
      //causeString: 'Triggered on $BRANCH_WH',

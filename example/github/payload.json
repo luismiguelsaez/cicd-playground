@@ -1,0 +1,44 @@
+{
+  "action": "completed",
+  "workflow_run": {
+    "id": 2249338332,
+    "name": "build",
+    "node_id": "WFR_kwLOG3CWNM6GEi3c",
+    "head_branch": "main",
+    "head_sha": "213e187fe58bdac88a79daedcd506e336ad3e4ca",
+    "run_number": 28,
+    "event": "push",
+    "status": "completed",
+    "conclusion": "success",
+    "workflow_id": 25013541,
+    "check_suite_id": 6325128059,
+    "check_suite_node_id": "CS_kwDOG3CWNM8AAAABeQHLew",
+    "url": "https://api.github.com/repos/luismiguelsaez/cicd-playground/actions/runs/2249338332",
+    "html_url": "https://github.com/luismiguelsaez/cicd-playground/actions/runs/2249338332",
+    "pull_requests": [
+
+    ],
+    "created_at": "2022-04-30T07:34:58Z",
+    "updated_at": "2022-04-30T07:36:10Z",
+    "actor": {
+      "login": "luismiguelsaez",
+      "id": 39694004,
+      "node_id": "MDQ6VXNlcjM5Njk0MDA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39694004?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/luismiguelsaez",
+      "html_url": "https://github.com/luismiguelsaez",
+      "followers_url": "https://api.github.com/users/luismiguelsaez/followers",
+      "following_url": "https://api.github.com/users/luismiguelsaez/following{/other_user}",
+      "gists_url": "https://api.github.com/users/luismiguelsaez/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/luismiguelsaez/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/luismiguelsaez/subscriptions",
+      "organizations_url": "https://api.github.com/users/luismiguelsaez/orgs",
+      "repos_url": "https://api.github.com/users/luismiguelsaez/repos",
+      "events_url": "https://api.github.com/users/luismiguelsaez/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/luismiguelsaez/received_events",
+      "type": "User",
+      "site_admin": false
+    }
+  }
+}
