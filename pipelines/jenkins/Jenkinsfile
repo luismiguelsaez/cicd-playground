@@ -6,7 +6,7 @@ pipeline {
       [key: 'BRANCH_WH', value: '$.branch']
      ],
 
-     causeString: 'Triggered on $BRANCH_WH',
+     //causeString: 'Triggered on $BRANCH_WH',
 
      token: 'dummy',
      tokenCredentialId: '',
