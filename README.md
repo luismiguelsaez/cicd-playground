@@ -10,3 +10,12 @@
     - https://plugins.jenkins.io/configuration-as-code/
     - https://github.com/jenkinsci/configuration-as-code-plugin/blob/master/README.md
     - http://localhost:8080/configuration-as-code/reference ( Jenkins server )
+
+
+### Generic Wehook trigger
+
+- Launch from GitHub
+
+```bash
+curl 'http://localhost:8080/generic-webhook-trigger/invoke' -H"Token:dummy" -XPOST -d '{"branch":"main"}'
+```
