@@ -58,7 +58,7 @@ pipeline {
 
     stage('Debugging build') {
       steps {
-        echo "Building branch: $BRANCH_WH"
+        echo "Building branch dummy: $BRANCH_WH"
       }
     }
 
