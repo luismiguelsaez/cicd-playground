@@ -51,7 +51,7 @@ pipeline {
               submoduleCfg: [],
               userRemoteConfigs: [
                 [
-                  credentialsId: 'git', 
+                  credentialsId: 'github-default-ssh', 
                   url: 'git@github.com:luismiguelsaez/cicd-playground.git'
                 ]
               ]
