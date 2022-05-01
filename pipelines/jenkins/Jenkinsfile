@@ -29,7 +29,7 @@ pipeline {
             [
               $class: 'GitSCM', 
               branches: [
-                [name: "${BRANCH_WH}"]
+                [name: "*/${BRANCH_WH}"]
               ], 
               doGenerateSubmoduleConfigurations: false, 
               extensions: [
@@ -49,7 +49,12 @@ pipeline {
                 ]
               ],
               submoduleCfg: [],
-              userRemoteConfigs: []
+              userRemoteConfigs: [
+                [
+                  credentialsId: 'git', 
+                  url: 'git@github.com:luismiguelsaez/cicd-playground.git'
+                ]
+              ]
             ]
           )
         }
