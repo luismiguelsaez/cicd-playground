@@ -49,12 +49,12 @@ pipeline {
                 ]
               ],
               submoduleCfg: [],
-              userRemoteConfigs: [
-                [
-                  credentialsId: 'github-default-ssh', 
-                  url: 'git@github.com:luismiguelsaez/cicd-playground.git'
-                ]
-              ]
+              //userRemoteConfigs: [
+              //  [
+              //    credentialsId: 'github-default-ssh', 
+              //    url: 'git@github.com:luismiguelsaez/cicd-playground.git'
+              //  ]
+              //]
             ]
           )
         }
