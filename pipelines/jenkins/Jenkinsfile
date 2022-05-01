@@ -21,10 +21,46 @@ pipeline {
     )
   }
   stages {
+
+    stage('Checkout') {
+      steps {
+        script {
+          def scmVars = checkout(
+            [
+              $class: 'GitSCM', 
+              branches: [
+                [name: "${BRANCH_WH}"]
+              ], 
+              doGenerateSubmoduleConfigurations: false, 
+              extensions: [
+                [
+                  $class: 'CleanBeforeCheckout',
+                  deleteUntrackedNestedRepositories: true
+                ],
+                [
+                  $class: 'CleanCheckout',
+                  deleteUntrackedNestedRepositories: true
+                ],
+                [
+                  $class: 'CloneOption',
+                  shallow: true,
+                  depth: 1,
+                  noTags: false
+                ]
+              ],
+              submoduleCfg: [],
+              userRemoteConfigs: [[]]
+            ]
+          )
+        }
+      }
+    }
+
     stage('Debugging build') {
       steps {
         echo "Building branch: $BRANCH_WH"
       }
     }
+
   }
 }
